@@ -1,9 +1,9 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width="500"
-  height="150"
-  viewBox="0 0 500 30">
-  <text id="lgtm" x="0" y="30" font-family="Verdana" font-size="100" font-weight="bold" fill="#ffd700">
+  width="300"
+  height="100"
+  viewBox="0 0 300 100">
+  <text id="lgtm" x="0" y="90" font-family="Verdana" font-size="100" font-weight="bold" fill="#ffd700">
     LGTM
   </text>
 </svg>
