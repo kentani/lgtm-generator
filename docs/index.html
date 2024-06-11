@@ -1,14 +1,12 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="500"
-  height="150"
-  viewBox="0 0 500 30">
-  <text id="lgtm" x="0" y="30" font-family="Verdana" font-size="100" font-weight="bold" fill="">
-    LGTM
-  </text>
-</svg>
-
 <script>
+  const fontColorList = [
+    "black",
+    "blue",
+    "green",
+    "orang",
+    "red",
+    "yellow",
+  ]
   window.onload = () => {
     let search = window.location.search.replace("?", "");
 
@@ -19,24 +17,10 @@
       params[key] = val;
     });
 
-    let fontColor = "";
-
-    switch (params["fontColor"]) {
-      case "blue":
-        fontColor = "#4169e1";
-        break;
-      case "green":
-        fontColor = "#008000";
-        break;
-      default:
-        fontColor = "";
-        break;
-    }
-
-    console.log(document.getElementById("lgtm"))
-
-    if (fontColor && fontColor.length > 0) {
-      document.getElementById("lgtm").setAttribute("fill", fontColor);
+    if (params["fontColor"] && params["fontColor"].length > 0) {
+      window.location.replace(`${params["fontColor"]}.svg`);
+    } else {
+      window.location.replace("black.svg");
     }
   }
 </script>
