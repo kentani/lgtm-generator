@@ -7,6 +7,7 @@
     "red",
     "yellow",
   ]
+
   window.onload = () => {
     let search = window.location.search.replace("?", "");
 
@@ -20,7 +21,8 @@
     if (params["fontColor"] && params["fontColor"].length > 0) {
       window.location.replace(`${params["fontColor"]}.svg`);
     } else {
-      window.location.replace("black.svg");
+      fontColor = fontColorList[Math.floor(Math.random() * (fontColorList.length - 1))];
+      window.location.replace(`${fontColor}.svg`);
     }
   }
 </script>
